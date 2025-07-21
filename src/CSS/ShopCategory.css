@@ -1,0 +1,123 @@
+:root {
+  --container-width: 82%;
+  --container-margin: 0 auto;
+  --border-radius: 40px;
+  --border-color: #888;
+  --text-color: #272424;
+  --light-bg: #ededed;
+  --gap-large: 80px;
+  --gap-medium: 30px;
+  --gap-small: 20px;
+}
+
+
+.shop-category {
+  padding: 2rem 0;
+}
+
+.shop-category__banner {
+  display: block;
+  width: var(--container-width);
+  max-width: 1200px;
+  margin: var(--gap-medium) auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.shop-category__header {
+  width: var(--container-width);
+  max-width: 1200px;
+  margin: var(--container-margin);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-medium);
+}
+
+.shop-category__title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+  color: var(--text-color);
+}
+
+.shop-category__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap-small);
+}
+
+.shop-category__count {
+  color: var(--text-color);
+}
+
+.shop-category__count span {
+  font-weight: 600;
+}
+
+.shop-category__products {
+  width: var(--container-width);
+  max-width: 1200px;
+  margin: var(--gap-small) auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--gap-large);
+}
+
+.shop-category__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.shop-category__load-more {
+  display: block;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  background: var(--light-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-category__load-more:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1024px) {
+  :root {
+    --container-width: 90%;
+    --gap-large: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-category__products {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+  }
+  
+  .shop-category__controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-width: 95%;
+    --gap-large: 30px;
+  }
+  
+  .shop-category__products {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

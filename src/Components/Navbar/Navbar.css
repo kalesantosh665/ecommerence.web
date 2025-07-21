@@ -1,0 +1,131 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__logo img {
+  height: 40px;
+}
+
+.navbar__logo p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color, #333);
+}
+
+.navbar__hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar__menu li {
+  position: relative;
+}
+
+.navbar__link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary, #555);
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  color: var(--primary-color, #0a58ca);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.navbar__login-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 20px;
+  background: #fff;
+  color: var(--text-primary, #000);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.navbar__login-btn:hover {
+  background-color: var(--hover-bg, #f0f0f0);
+}
+
+.navbar__cart {
+  position: relative;
+}
+
+.navbar__cart img {
+  height: 30px;
+}
+
+.navbar__cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: var(--accent-color, #e63946);
+  color: #fff;
+  font-size: 0.7rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .navbar__hamburger {
+    display: block;
+  }
+
+  .navbar__menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    padding: 1rem;
+    transform: translateY(-300%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar__menu.open {
+    transform: translateY(0%);
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__actions {
+    display: none;
+  }
+}

@@ -1,0 +1,116 @@
+
+:root {
+  --offers-bg-gradient: linear-gradient(180deg, rgba(225, 255, 234, 0.13), #47fdae 60%);
+  --text-dark: #171717;
+  --accent-color: #ff4141;
+  --accent-hover: #e63939;
+  --white: #ffffff;
+  --radius-full: 9999px;
+  --transition: all 0.3s ease;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.offers {
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.offers__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: var(--offers-bg-gradient);
+}
+
+/* Content Styles */
+.offers__content {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.offers__heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.offers__heading-line {
+  color: var(--text-dark);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.offers__subheading {
+  color: var(--text-dark);
+  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+
+.offers__cta {
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-color);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: var(--transition);
+}
+
+.offers__cta:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Image Styles */
+.offers__image-wrapper {
+  order: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.offers__image {
+  max-width: 100%;
+  height: auto;
+  max-height: 330px;
+  object-fit: contain;
+}
+
+
+@media (min-width: 768px) {
+  .offers__container {
+    flex-direction: row;
+    align-items: center;
+    padding: 3rem;
+    min-height: 60vh;
+  }
+
+  .offers__content {
+    order: 1;
+    flex: 1;
+  }
+
+  .offers__image-wrapper {
+    order: 2;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .offers__heading-line {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}

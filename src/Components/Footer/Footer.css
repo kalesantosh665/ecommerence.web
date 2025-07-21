@@ -1,0 +1,150 @@
+:root {
+  --footer-bg: #ffffff;
+  --text-primary: #252525;
+  --text-secondary: #383838;
+  --border-color: #ebebeb;
+  --divider-color: #c7c7c7;
+  --social-bg: #fbfbfb;
+  --radius-sm: 10px;
+  --transition: all 0.3s ease;
+}
+
+
+.footer {
+  width: 100%;
+  padding: 3rem 1rem;
+  background: var(--footer-bg);
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer__logo {
+  object-fit: contain;
+}
+
+.footer__brand-name {
+  color: var(--text-secondary);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+
+.footer__navigation {
+  width: 100%;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.footer__link-item {
+  display: flex;
+}
+
+.footer__link {
+  color: var(--text-primary);
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  text-decoration: none;
+  transition: var(--transition);
+  padding: 0.5rem;
+}
+
+.footer__link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+
+.footer__social {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.625rem;
+  background: var(--social-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  transition: var(--transition);
+}
+
+.footer__social-link:hover {
+  transform: translateY(-3px);
+  color: var(--text-secondary);
+}
+
+
+.footer__legal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer__divider {
+  width: 80%;
+  max-width: 800px;
+  height: 0.125rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--divider-color);
+}
+
+.footer__copyright {
+  color: var(--text-primary);
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .footer__links {
+    gap: 1rem;
+  }
+  
+  .footer__social {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__container {
+    gap: 1.5rem;
+  }
+  
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

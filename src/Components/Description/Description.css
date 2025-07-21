@@ -1,0 +1,103 @@
+
+:root {
+  --border-color: #d0d0d0;
+  --text-color: #333;
+  --text-light: #555;
+  --bg-light: #fbfbfb;
+  --primary-color: #ff4141;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --radius-sm: 4px;
+}
+
+
+.product-description {
+  margin: var(--spacing-lg) auto;
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
+}
+
+.description-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: -1px; /* Align with content border */
+}
+
+.description-tab {
+  padding: 0.75rem var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.description-tab:hover {
+  color: var(--text-color);
+}
+
+.description-tab.active {
+  color: var(--primary-color);
+  background: var(--bg-light);
+  border-color: var(--border-color);
+  border-bottom: 1px solid var(--bg-light);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.description-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+.description-content {
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-lg);
+  background: var(--bg-light);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) var(--radius-sm);
+}
+
+.description-text p,
+.product-features p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.product-features {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px dashed var(--border-color);
+}
+
+.product-features h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+}
+
+.reviews-coming-soon {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+  .product-description {
+    margin: var(--spacing-md) 0;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .description-content {
+    padding: var(--spacing-md);
+  }
+}

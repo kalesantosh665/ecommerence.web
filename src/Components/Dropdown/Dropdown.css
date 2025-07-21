@@ -1,0 +1,20 @@
+.dropdown {
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('../assets/dropdown_icon.png');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 20px;
+  padding-right: 2.5rem;
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: #ff4141;
+  box-shadow: 0 0 0 2px rgba(255, 65, 65, 0.2);
+}
