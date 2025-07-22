@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
-import '../BreadCrumbs/BreadCrumbs.css';
+import './BreadCrumbs.css'; // Assuming you have a CSS file for styles
+
 
 
 const Breadcrumbs = ({ product }) => {
