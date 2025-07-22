@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
 import '../BreadCrumbs/BreadCrumbs.css';
-import './BreadCrumbs.css';
+
 
 const Breadcrumbs = ({ product }) => {
   const crumbs = [
