@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../NewsLetter/Newsletter.css';
+import './Newsletter.css'; 
 
 
 const Newsletter = () => {
