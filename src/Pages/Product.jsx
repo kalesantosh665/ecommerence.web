@@ -3,7 +3,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 import { useParams, useNavigate } from 'react-router-dom';
-import Breadcrumbs from '../Components/BreadCrumbs/BreadCrumbs';
+import Breadcrumbs from "../Components/BreadCrumbs/BreadCrumbs"; // This one
+
 import ProductDisplay from '../Components/ProductDisplay/ProductDisplay';
 import Description from '../Components/Description/Description';
 import RelatedProducts from '../Components/RelatedProducts/RelatedProducts';
